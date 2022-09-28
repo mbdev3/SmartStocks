@@ -2,4 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme:light) {}
+#search-list::-webkit-scrollbar {
+  background-color: transparent;
+
+}
+
+#search-list::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  background-color: #495057;
+
+}
+
+#search-list::-webkit-scrollbar {
+
+  width: 10px !important;
+
+}
+
+#search-list::-webkit-scrollbar-track {
+
+  margin: 12px 0 !important;
+
+}
+
+@media (max-width:1366px) {}

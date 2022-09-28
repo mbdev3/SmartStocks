@@ -5,7 +5,7 @@ module.exports = {
   content: ['./src/**/*.{html,js,jsx}'],
   theme: {
     screens: {
-      sm: '480px',
+      sm: '640px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
@@ -46,10 +46,11 @@ module.exports = {
       center: true,
       padding: {
         DEFAULT: '1rem',
-        sm: '1.5rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        sm: '1rem',
+        md: '1rem',
+        lg: '2rem',
+        xl: '1rem',
+        '2xl': '2rem',
       },
     },
     backgroundImage: {

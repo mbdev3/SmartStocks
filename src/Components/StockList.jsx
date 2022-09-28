@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import finnHub from '../APIS/finnHub';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { useAppContext } from '../context/appContext';
-const tableTitles = ['name', 'last', 'chg', 'chg%', 'high', 'low', 'open', 'pclose', 'time'];
+import { useNavigate } from 'react-router-dom';
+const tableTitles = ['name', 'last', 'chg', 'chg%', 'high', 'low', 'open', 'pclose', 'time', ''];
 const StockList = () => {
   const [stock, setStock] = useState([]);
-  const { watchList } = useAppContext();
+  const { watchList, deleteStock } = useAppContext();
+  const navigate = useNavigate();
   useEffect(() => {
     let isMounted = true;
 
@@ -42,6 +44,9 @@ const StockList = () => {
       return false;
     }
   };
+  const stockDetails = (symbol) => {
+    navigate(`details/${symbol}`);
+  };
   useEffect(() => {}, [stock]);
   return (
     <div>
@@ -64,7 +69,8 @@ const StockList = () => {
               return (
                 <tr
                   key={index}
-                  className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600'>
+                  className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer'
+                  onClick={() => stockDetails(symbol)}>
                   <th
                     scope='row'
                     className='py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white'>
@@ -79,9 +85,9 @@ const StockList = () => {
                         key={index}
                         className={`py-4 px-6  ${
                           changeColor(index, value) === '+'
-                            ? 'text-lime-600'
+                            ? 'text-lime-600 font-semibold'
                             : changeColor(index, value) === '-'
-                            ? 'text-red-600'
+                            ? 'text-red-600 font-semibold'
                             : 'text-gray-600 dark:text-gray-400'
                         } `}>
                         <span className='flex items-center gap-1'>
@@ -97,11 +103,27 @@ const StockList = () => {
                       </td>
                     );
                   })}
+                  <td>
+                    <button
+                      className='bg-gray-100 py-1 px-2 rounded text-gray-800 hover:bg-gray-300'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        deleteStock(symbol);
+                      }}>
+                      delete
+                    </button>
+                  </td>
                 </tr>
               );
             })}
           </tbody>
         </table>
+      </div>
+      <div className='text-center mt-2'>
+        {' '}
+        <span className='text-xs italic font-semibold '>
+          *Due to API limitations, only US based companies can be added.
+        </span>
       </div>
     </div>
   );

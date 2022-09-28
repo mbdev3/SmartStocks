@@ -14,20 +14,25 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <button class="bg-red-500 p-3 m-3" id="test">X</button>
+
     <div id="root"></div>
 
     <script>
-      let btn = document.querySelector('#test');
-      btn.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        if (window.matchMedia('(prefers-color-scheme: dark)')) {
-          console.log('Dark!!!!');
-        } else {
-          console.log('Light !!!!!');
-        }
-        console.log(window.matchMedia('(prefers-color-scheme: light)'));
+      document.addEventListener('DOMContentLoaded', () => {
+        document.documentElement.classList.add('dark');
       });
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   document.documentElement.classList.add('dark');
+      // });
+      // let btn = document.querySelector('#test');
+      // btn.addEventListener('click', () => {
+      //   document.documentElement.classList.toggle('dark');
+      //   if (window.matchMedia('(prefers-color-scheme: dark)')) {
+      //     console.log('Dark!!!!');
+      //   } else {
+      //     console.log('Light !!!!!');
+      //   }
+      // });
 
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
       if (
