@@ -1,3 +1,4 @@
+/* eslint-disable array-callback-return */
 import React, { useState, useEffect } from 'react';
 import finnHub from '../APIS/finnHub';
 import { useAppContext } from '../context/appContext';
