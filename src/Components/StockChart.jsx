@@ -39,7 +39,6 @@ const StockChart = ({ chartData, symbol }) => {
         return 0;
     }
   };
-  console.log();
 
   const options = {
     colors: [`${stockDiff > 0 ? '#4caf50' : stockDiff < 0 ? '#ef5259' : '#008ffb'}`],

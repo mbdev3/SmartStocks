@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className='flex items-center'>
-          <button class='text-2xl' id='test' onClick={() => handleClick()}>
+          <button className='text-2xl' id='test' onClick={() => handleClick()}>
             {!isDark ? (
               <BsMoonFill className='text-gray-800' />
             ) : (

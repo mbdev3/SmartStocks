@@ -5,53 +5,25 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <meta
+      name="description"
+      content="Get real time stock data with companies profiles.
+
+"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-touch-icon.png" />
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <title>React App</title>
+    <title>Smart Stock</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <div id="root"></div>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.add('dark');
       });
-      // document.addEventListener('DOMContentLoaded', () => {
-      //   document.documentElement.classList.add('dark');
-      // });
-      // let btn = document.querySelector('#test');
-      // btn.addEventListener('click', () => {
-      //   document.documentElement.classList.toggle('dark');
-      //   if (window.matchMedia('(prefers-color-scheme: dark)')) {
-      //     console.log('Dark!!!!');
-      //   } else {
-      //     console.log('Light !!!!!');
-      //   }
-      // });
-
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
-
-      // Whenever the user explicitly chooses light mode
-      localStorage.theme = 'light';
-
-      // Whenever the user explicitly chooses dark mode
-      localStorage.theme = 'dark';
-
-      // Whenever the user explicitly chooses to respect the OS preference
-      localStorage.removeItem('theme');
     </script>
   </body>
 </html>

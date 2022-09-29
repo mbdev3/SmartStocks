@@ -20,7 +20,6 @@ export const AppProvider = ({ children }) => {
           symbol: stock,
         },
       });
-      console.log(response);
       if (watchList.indexOf(stock) === -1) {
         setWatchList([...watchList, stock]);
         setAlert(true);
