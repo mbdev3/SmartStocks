@@ -1,13 +1,42 @@
 import React from 'react';
 import { useAppContext } from '../context/appContext';
-
+import logo from '../assets/ipo.png';
+import { BsMoonFill, BsSun } from 'react-icons/bs';
+import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
-  const { handleClick } = useAppContext();
+  const { handleClick, isDark } = useAppContext();
+  const navigate = useNavigate();
   return (
-    <div className='w-full bg-gray-400'>
-      <button class='bg-red-500 p-3 m-3' id='test' onClick={() => handleClick()}>
-        X
-      </button>
+    <div className='w-full bg-gray-200 border-b border-gray-600 py-4 dark:bg-gray-800 '>
+      <div className='container flex items-center justify-between'>
+        {' '}
+        <div className='flex items-center gap-32'>
+          <div
+            className='flex items-center gap-2 cursor-pointer'
+            href={'#'}
+            onClick={() => navigate('/')}>
+            {' '}
+            <img src={logo} alt='logo' className='w-10' />
+            <p className='font-extrabold text-3xl' id='logo-text'>
+              SmartStock
+            </p>
+          </div>
+          <div>
+            {/* <ul className='text-gray-800 hover:text-mainColor dark:hover:text-mainColor dark:text-gray-200 font-semibold tracking-wider text-xl '>
+              <li onClick={() => navigate('/')}>Home</li>
+            </ul> */}
+          </div>
+        </div>
+        <div className='flex items-center'>
+          <button class='text-2xl' id='test' onClick={() => handleClick()}>
+            {!isDark ? (
+              <BsMoonFill className='text-gray-800' />
+            ) : (
+              <BsSun className='text-gray-200' />
+            )}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

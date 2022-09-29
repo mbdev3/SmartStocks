@@ -14,7 +14,7 @@ module.exports = {
 
     extend: {
       colors: {
-        mainColor: '#FD5A5A',
+        mainColor: '#9932CC',
         halfTrans: 'rgba(255,255,255,0.5)',
         hero1: '#FAAEB2',
         hero2: '#78A7DA',

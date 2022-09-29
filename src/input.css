@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+
+}
+
 #search-list::-webkit-scrollbar {
   background-color: transparent;
 
@@ -27,3 +42,105 @@
 }
 
 @media (max-width:1366px) {}
+
+#logo-text {
+
+  background: -webkit-linear-gradient(right, #B311F6,
+      #4422E8, #c683e2, #9182dd, #B311F6,
+      #4422E8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500%;
+  background-position: right;
+  animation: bg infinite 5s alternate;
+}
+
+
+
+@keyframes bg {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
+
+#blob-1 path {
+  -webkit-animation: blob1 15s linear infinite;
+  -moz-animation: blob1 15s linear infinite;
+  -o-animation: blob1 15s linear infinite;
+  animation: blob1 infinite 10s linear;
+}
+
+#blob-1 {
+  -webkit-animation: blob11 15s linear infinite;
+  -moz-animation: blob11 15s linear infinite;
+  -o-animation: blob11 15s linear infinite;
+  animation: blob11 infinite 15s alternate-reverse;
+}
+
+#blob-2 {
+  animation: blob2 infinite 3s alternate-reverse;
+}
+
+/* prettier-ignore */
+@keyframes blob1 {
+  0% {
+    d: path("M62.2,-47.7C73.3,-35.7,70,-10.3,62.6,11.2C55.2,32.6,43.8,50,25.8,61.9C7.7,73.7,-17,80.1,-33.9,71.5C-50.8,62.9,-60,39.4,-63,17C-66,-5.3,-62.8,-26.4,-51.3,-38.5C-39.7,-50.5,-19.9,-53.5,2.8,-55.8C25.6,-58.1,51.1,-59.6,62.2,-47.7Z");
+
+  }
+
+  25% {
+    d: path("M58.2,-46.7C72,-29,77.5,-5,73.4,18.2C69.2,41.4,55.4,63.8,35.2,73.8C15,83.9,-11.6,81.5,-28.3,69.4C-45,57.3,-51.9,35.3,-58.1,12.1C-64.4,-11.1,-69.9,-35.7,-60.1,-52.4C-50.4,-69.1,-25.2,-77.9,-1.5,-76.7C22.2,-75.5,44.3,-64.3,58.2,-46.7Z")
+  }
+
+  50% {
+    d: path("M46.2,-31.2C62.2,-16.7,79.2,2.6,78.3,22.5C77.5,42.4,58.8,62.8,37.5,69.9C16.3,77,-7.4,70.8,-27.8,60C-48.1,49.3,-65.1,34,-70.1,15.2C-75,-3.7,-67.9,-26,-54.2,-40C-40.5,-53.9,-20.2,-59.4,-2.6,-57.3C15.1,-55.3,30.2,-45.7,46.2,46.2,-31.2Z")
+  }
+
+  100% {
+    d: path("M46.2,-31.2C62.2,-16.7,79.2,2.6,78.3,22.5C77.5,42.4,58.8,62.8,37.5,69.9C16.3,77,-7.4,70.8,-27.8,60C-48.1,49.3,-65.1,34,-70.1,15.2C-75,-3.7,-67.9,-26,-54.2,-40C-40.5,-53.9,-20.2,-59.4,-2.6,-57.3C15.1,-55.3,30.2,-45.7,46.2,46.2,-31.2Z")
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+
+  0% {
+    transform: translateY(10%);
+  }
+}
+
+@keyframes blob11 {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(-90deg);
+  }
+
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+}
+
+
+.dotted {
+  height: 100px;
+  width: 100px;
+  background-image: radial-gradient(rgb(196, 48, 233) 10%, transparent 10%),
+    radial-gradient(#ccc 10%, transparent 10%);
+
+  background-position: 0 0, 25px 25px;
+  background-size: 25px 25px;
+}

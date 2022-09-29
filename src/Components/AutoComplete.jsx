@@ -37,10 +37,10 @@ const AutoComplete = () => {
   }, [alert]);
   return (
     <div onClick={() => setSearch('')}>
-      <div className='flex justify-center my-4 flex-col items-center relative '>
+      <div className='flex justify-center mb-4 flex-col items-center relative '>
         <input
           type='text'
-          className='appearance-none block w-[300px] bg-gray-200 text-gray-700 placeholder:text-gray-600 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white'
+          className='appearance-none block w-[300px] bg-gray-50 dark:bg-gray-200 text-gray-700 placeholder:text-gray-600 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white opacity-90'
           placeholder='Search..'
           id='search'
           autoComplete='off'

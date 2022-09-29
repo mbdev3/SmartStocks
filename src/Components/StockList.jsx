@@ -3,10 +3,22 @@ import finnHub from '../APIS/finnHub';
 import { BsFillCaretDownFill, BsFillCaretUpFill } from 'react-icons/bs';
 import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
-const tableTitles = ['name', 'last', 'chg', 'chg%', 'high', 'low', 'open', 'pclose', 'time', ''];
+const tableTitles = [
+  'name',
+  'last',
+  'chg',
+  'chg%',
+  'high',
+  'low',
+  'open',
+  'pclose',
+  'time',
+  '',
+  '',
+];
 const StockList = () => {
   const [stock, setStock] = useState([]);
-  const { watchList, deleteStock } = useAppContext();
+  const { watchList, deleteStock, addStock } = useAppContext();
   const navigate = useNavigate();
   useEffect(() => {
     let isMounted = true;
@@ -50,7 +62,7 @@ const StockList = () => {
   useEffect(() => {}, [stock]);
   return (
     <div>
-      <div className='overflow-x-auto relative shadow-md sm:rounded-lg'>
+      <div className='overflow-x-auto relative shadow-md sm:rounded-lg opacity-90'>
         <table className='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
           <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
             <tr>
@@ -69,8 +81,7 @@ const StockList = () => {
               return (
                 <tr
                   key={index}
-                  className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 cursor-pointer'
-                  onClick={() => stockDetails(symbol)}>
+                  className='bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600  '>
                   <th
                     scope='row'
                     className='py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white'>
@@ -103,6 +114,16 @@ const StockList = () => {
                       </td>
                     );
                   })}
+                  <td className=''>
+                    <button
+                      className='bg-mainColor py-1 px-2 rounded text-white hover:bg-fuchsia-700'
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        stockDetails(symbol);
+                      }}>
+                      details
+                    </button>
+                  </td>
                   <td>
                     <button
                       className='bg-gray-100 py-1 px-2 rounded text-gray-800 hover:bg-gray-300'
@@ -121,7 +142,7 @@ const StockList = () => {
       </div>
       <div className='text-center mt-2'>
         {' '}
-        <span className='text-xs italic font-semibold '>
+        <span className='text-xs italic font-semibold text-gray-700 dark:text-gray-500'>
           *Due to API limitations, only US based companies can be added.
         </span>
       </div>

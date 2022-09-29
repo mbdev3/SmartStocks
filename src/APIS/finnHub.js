@@ -1,5 +1,6 @@
 import axios from 'axios';
-const token = 'ccoadgqad3i89lgc0vo0ccoadgqad3i89lgc0vog';
+
+const token = process.env.REACT_APP_API_KEY;
 export default axios.create({
   baseURL: 'https://finnhub.io/api/v1',
   params: {

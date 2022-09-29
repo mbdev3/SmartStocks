@@ -26,10 +26,10 @@ const StockData = ({ symbol }) => {
     return () => (isMounted = false);
   }, [symbol]);
   return (
-    <div className=''>
+    <div className='bg-gray-400 dark:bg-gray-900 mb-10 opacity-90'>
       {results && (
-        <div className='bg-gray-200 p-4 text-gray-800 dark:bg-gray-900 dark:text-gray-500  font-bold  '>
-          <div className='flex gap-8 items-center '>
+        <div className='px-4 py-8 text-gray-800  dark:text-gray-500  font-bold  '>
+          <div className='flex gap-8 lg:items-center flex-col lg:flex-row'>
             <div className=''>
               <img src={results.logo} alt='' className='w-24' />
             </div>
@@ -63,7 +63,7 @@ const StockData = ({ symbol }) => {
               <p>
                 Website :
                 <a
-                  className='font-normal mx-1 dark:text-gray-100 underline hover:text-mainColor'
+                  className='font-normal mx-1 hover:text-mainColor underline dark:text-gray-100 dark:hover:text-mainColor '
                   href={results.weburl}>
                   {results.weburl}
                 </a>

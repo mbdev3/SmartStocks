@@ -74,10 +74,14 @@ const StockDetail = () => {
     fetchData();
   }, [symbol]);
   return (
-    <div>
-      {chartData && <StockChart chartData={chartData} symbol={symbol} />}
+    <div className='container px-0 my-10 relative z-10 overflow-hidden '>
+      <div className='dotted absolute -right-0 -top-0 0 -z-10'></div>
+      <div className='dotted absolute -left-0 -bottom-0  -z-10'></div>
+      <div className=' shadow-card dark:shadow-2xl z-10 '>
+        {chartData && <StockChart chartData={chartData} symbol={symbol} />}
 
-      <StockData symbol={symbol} />
+        <StockData symbol={symbol} />
+      </div>
     </div>
   );
 };

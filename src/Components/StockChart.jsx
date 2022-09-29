@@ -105,14 +105,14 @@ const StockChart = ({ chartData, symbol }) => {
   }, [dateToggle]);
 
   return (
-    <div className='bg-gray-100 p-4 mt-8 dark:bg-gray-800 dark:text-gray-400'>
+    <div className='bg-gray-200 p-4 mt-12 dark:bg-gray-800  opacity-90 '>
       <Chart
         options={options}
         series={series}
         type='area'
         width='100%'
         height={'300px'}
-        className='dark:text-gray-400 !dark:text-gray-50'
+        className=''
         style={{}}
       />
       <div className='flex gap-2 px-8 py-2'>
