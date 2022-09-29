@@ -101,6 +101,7 @@ const StockChart = ({ chartData, symbol }) => {
   ];
   useEffect(() => {
     determineStockDiff();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dateToggle]);
 
   return (

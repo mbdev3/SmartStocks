@@ -34,6 +34,7 @@ const AutoComplete = () => {
         setAlertMessage('');
       }, 2000);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [alert]);
   return (
     <div onClick={() => setSearch('')}>
