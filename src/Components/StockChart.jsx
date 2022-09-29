@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import appexCharts from 'apexcharts';
+
 import Chart from 'react-apexcharts';
 import { useAppContext } from '../context/appContext';
 const StockChart = ({ chartData, symbol }) => {

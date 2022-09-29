@@ -18,7 +18,7 @@ const tableTitles = [
 ];
 const StockList = () => {
   const [stock, setStock] = useState([]);
-  const { watchList, deleteStock, addStock } = useAppContext();
+  const { watchList, deleteStock } = useAppContext();
   const navigate = useNavigate();
   useEffect(() => {
     let isMounted = true;

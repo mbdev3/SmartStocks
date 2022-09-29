@@ -15,7 +15,7 @@ export const AppProvider = ({ children }) => {
 
   const addStock = async (stock) => {
     try {
-      const response = await finnHub.get('/quote', {
+      await finnHub.get('/quote', {
         params: {
           symbol: stock,
         },

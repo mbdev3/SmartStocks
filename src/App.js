@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StockOverview from './pages/StockOverview.jsx';
 import StockDetail from './pages/StockDetail';
-import { AppProvider, useAppContext } from './context/appContext';
+import { AppProvider } from './context/appContext';
 import Navbar from './Components/Navbar.jsx';
 import Footer from './Components/Footer.jsx';
 
