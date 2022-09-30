@@ -73,7 +73,6 @@ const AutoComplete = () => {
             })}
           </ul>
         )}
-
         {alert && (
           <div
             className={`absolute w-[300px] text-center top-full left-1/2 -translate-x-1/2 p-2 z-20 rounded-lg transition-500 ${
