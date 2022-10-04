@@ -30,9 +30,9 @@ const Navbar = () => {
         <div className='flex items-center'>
           <button className='text-2xl' id='test' onClick={() => handleClick()}>
             {isDark ? (
-              <BsMoonFill className='text-gray-800' />
+              <BsMoonFill className='text-gray-200' />
             ) : (
-              <BsSun className='text-gray-200' />
+              <BsSun className='text-gray-800' />
             )}
           </button>
         </div>
