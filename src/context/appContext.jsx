@@ -2,7 +2,13 @@ import { createContext, useState, useContext, useEffect } from 'react';
 import finnHub from '../APIS/finnHub';
 
 export const AppContext = createContext();
-const initialList = localStorage.getItem('watchList')?.split(',') || ['GOOGL', 'MSFT', 'AMZN'];
+const initialList = localStorage.getItem('watchList')?.split(',') || [
+  'GOOGL',
+  'SONY',
+  'AMZN',
+  'TSLA',
+  'MSFT',
+];
 export const AppProvider = ({ children }) => {
   const [watchList, setWatchList] = useState(initialList);
   const [alert, setAlert] = useState(false);
