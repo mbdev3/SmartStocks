@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className='bg-gray-300 dark:bg-gray-900 py-6 '>
+    <footer className='py-6 border-t border-gray-500'>
       <div className='flex flex-row gap-2 justify-center'>
         <span className='text-xl font-semibold text-gray-800 dark:text-gray-400'>By</span>
         <a href='https://www.thembdev.com/'>

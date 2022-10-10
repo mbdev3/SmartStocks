@@ -14,7 +14,9 @@ const StockOverview = () => {
               Get real time stock data with companies profiles.
             </p>
           </div>
-          <div className='absolute top-0 right-0 w-[28rem]' id='blob-1'>
+          <div
+            className='absolute md:top-1/2 md:-translate-y-1/2 lg:top-0 right-0 w-[28rem]'
+            id='blob-1'>
             <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
                 fill='#9932CC'
@@ -23,7 +25,7 @@ const StockOverview = () => {
               />
             </svg>
           </div>
-          <div className='absolute top-full left-0 w-96' id='blob-2'>
+          <div className='absolute top-full left-0 w-96 hidden lg:block' id='blob-2'>
             <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
                 fill='#9932CC'
