@@ -15,7 +15,7 @@ const StockOverview = () => {
             </p>
           </div>
           <div
-            className='absolute top-1/2 -translate-y-1/2 lg:top-0 lg:translate-y-0 right-0 w-[28rem]'
+            className='absolute top-1/2 -translate-y-1/2 lg:top-0 lg:translate-y-0 right-0 w-[20rem] lg:w-[28rem]'
             id='blob-1'>
             <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
