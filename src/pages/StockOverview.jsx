@@ -3,19 +3,19 @@ import AutoComplete from '../Components/AutoComplete';
 import StockList from '../Components/StockList';
 const StockOverview = () => {
   return (
-    <div className='bg-gray-200 min-h-screen dark:bg-gray-800'>
+    <div className='bg-gray-200 min-h-screen dark:bg-gray-800 z-10 '>
       <div className='container'>
-        <section className='px-4 mt-20 mb-10 text-left lg:text-center relative'>
-          <div className='flex flex-col gap-8 max-w-screen-lg mx-auto'>
-            <h1 className='text-3xl md:text-4xl lg:text-6xl font-bold text-gray-800 dark:text-gray-400'>
+        <section className='px-4 mt-20 mb-10 text-left md:text-center relative'>
+          <div className='flex flex-col gap-8 max-w-screen-md mx-auto z-50'>
+            <h1 className='text-4xl  md:text-6xl font-bold text-gray-800 dark:text-gray-400 z-50'>
               Smart Stock
             </h1>
-            <p className='text-xl lg:text-2xl text-gray-700 dark:text-gray-500'>
+            <p className='text-xl md:text-2xl text-gray-700 dark:text-gray-500 z-50'>
               Get real time stock data with companies profiles.
             </p>
           </div>
           <div
-            className='absolute top-1/2 -translate-y-1/2 lg:top-0 lg:translate-y-0 right-0 w-[20rem] lg:w-[28rem]'
+            className=' absolute top-full translate-x-1/2  right-1/2 w-[28rem] md:w-[28rem] md:top-0 md:translate-y-0 md:right-0 md:translate-x-0 -z-0'
             id='blob-1'>
             <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
@@ -25,7 +25,7 @@ const StockOverview = () => {
               />
             </svg>
           </div>
-          <div className='absolute top-full left-0 w-96 hidden lg:block' id='blob-2'>
+          <div className='absolute top-full left-0 w-96 hidden md:block' id='blob-2'>
             <svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'>
               <path
                 fill='#9932CC'

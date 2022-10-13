@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <AppProvider>
-        <div className='bg-gray-200 min-h-screen dark:bg-gray-800 '>
+        <div className='bg-gray-200 min-h-screen dark:bg-gray-800 overflow-x-hidden'>
           <BrowserRouter>
             <Navbar />
             <Routes>
